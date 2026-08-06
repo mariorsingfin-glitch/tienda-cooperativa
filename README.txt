@@ -1,4 +1,4 @@
-CRENERGÍA V3
+CRENERGÍA V3 BETA
 1. Descomprima el ZIP.
 2. Reemplace los archivos del repositorio GitHub por estos archivos en la raíz.
 3. Confirme los cambios en main.
