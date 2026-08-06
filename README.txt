@@ -1,4 +1,4 @@
-CRENERGÍA V6 — CORRECCIÓN DE PANTALLAS
+CRENERGÍA V6 — CORRECCIÓN DE PANTALLAS - VERSION BETA
 
 Corrección principal:
 - Se eliminó el uso de la misma clase .screen en varios niveles.
