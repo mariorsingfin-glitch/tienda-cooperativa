@@ -1,4 +1,4 @@
-CRENERGÍA V4 — NAVEGACIÓN PROGRESIVA
+CRENERGÍA V4 VERSIÓN BETA — NAVEGACIÓN PROGRESIVA
 
 Cambio principal:
 - La pantalla inicial solo muestra cuatro decisiones.
