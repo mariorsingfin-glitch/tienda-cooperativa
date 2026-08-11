@@ -1,4 +1,4 @@
-CRENERGÍA V9 — IDENTIDAD VISUAL
+CRENERGÍA V9 — IDENTIDAD VISUAL - Versión 11 del 11 de Agosto
 
 Cambios:
 - CRENERGÍA pasa a ser la identidad visual de la plataforma general.
