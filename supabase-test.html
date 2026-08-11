@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba Supabase</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<h2>Prueba conexión CRENERGÍA ↔ Supabase</h2>
+
+<pre id="resultado">Probando conexión...</pre>
+
+<script>
+  const SUPABASE_URL =
+    'https://cndnivocvkyghzdpvypc.supabase.co';
+
+  const SUPABASE_PUBLISHABLE_KEY =
+    'sb_publishable_JNMkS9Sk-6b4FrO5IEdf1w_h4RpqR9N';
+
+  const client = supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+  );
+
+  async function probar() {
+    const salida = [];
+
+    const { data: technical, error: technicalError } =
+      await client
+        .from('technical_parameters')
+        .select('*');
+
+    if (technicalError) {
+      salida.push(
+        '❌ technical_parameters: ' +
+        technicalError.message
+      );
+    } else {
+      salida.push(
+        '✅ technical_parameters: ' +
+        technical.length +
+        ' registros'
+      );
+      salida.push(JSON.stringify(technical, null, 2));
+    }
+
+    salida.push('\n----------------------\n');
+
+    const { data: tariffs, error: tariffsError } =
+      await client
+        .from('tariffs')
+        .select('*');
+
+    if (tariffsError) {
+      salida.push(
+        '❌ tariffs: ' +
+        tariffsError.message
+      );
+    } else {
+      salida.push(
+        '✅ tariffs: ' +
+        tariffs.length +
+        ' registros'
+      );
+      salida.push(JSON.stringify(tariffs, null, 2));
+    }
+
+    document.getElementById('resultado').textContent =
+      salida.join('\n');
+  }
+
+  probar();
+</script>
+
+</body>
+</html>
